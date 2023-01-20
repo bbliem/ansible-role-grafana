@@ -1,16 +1,16 @@
 - name: Create grafana user
-  user:
+  ansible.builtin.user:
     name: grafana
-    create_home: no
+    create_home: false
     state: present
-    system: yes
+    system: true
 
 - name: Create docker network
-  docker_network:
+  community.docker.docker_network:
     name: grafana
 
 - name: Start Grafana Image Renderer docker container
-  docker_container:
+  community.docker.docker_container:
     name: grafana-image-renderer
     image: "{{ grafana_image_renderer_docker_image }}"
     networks:
@@ -19,7 +19,7 @@
     restart_policy: unless-stopped
 
 - name: Start Grafana docker container
-  docker_container:
+  community.docker.docker_container:
     name: grafana
     image: "{{ grafana_docker_image }}"
     labels:
