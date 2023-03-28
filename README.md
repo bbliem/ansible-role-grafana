@@ -13,5 +13,5 @@ Ansible role for installing Grafana
 
 ### Docker
 
-- `grafana_docker_image` [default: `grafana/grafana:9.2.3`]
-- `grafana_image_renderer_docker_image` [default: `grafana/grafana-image-renderer:3.0.1`]
+- `grafana_docker_image` [default: `grafana/grafana:9.4.7`]
+- `grafana_image_renderer_docker_image` [default: `grafana/grafana-image-renderer:3.6.4`]
