@@ -1,4 +1,4 @@
-grafana_docker_image: grafana/grafana:9.4.7
-grafana_image_renderer_docker_image: grafana/grafana-image-renderer:3.6.4
+grafana_docker_image: grafana/grafana:10.1.0
+grafana_image_renderer_docker_image: grafana/grafana-image-renderer:3.7.2
 grafana_traefik_router_rule: Host(`{{ grafana_hostname }}`)
 grafana_server_root_url: https://{{ grafana_hostname }}
